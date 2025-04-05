@@ -3,11 +3,11 @@ import {motion} from 'framer-motion';
 import type React from 'react';
 import { useEffect, useState } from 'react';
 
-type SemanticElementTag = | 'article' |'main' | 'footer' | 'header' | 'nav' | 'section' | 'mark' | 'details' ;
+type SemanticElementTag = | 'article' |'main' | 'footer' | 'header' | 'nav' | 'section' | 'mark';
 
 //semantic HTML elements to be used in the animation
 const semanticElements = [
-    'article','main', 'footer', 'header', 'nav', 'section', 'mark', 'details'
+    'article','main', 'footer', 'header', 'nav', 'section', 'mark'
 ];
 
 // Define the props interface for the SemanticShootingStar component
@@ -52,7 +52,7 @@ const SemanticShootingStar = ({tag, delay = 0, duration = 1, size = 1, top = 0, 
                 repeatDelay: Math.random() * 15 + 5
             }}
         >
-            {tag}
+            {`<${tag}>`}
         </Element>
     )
 }
@@ -109,8 +109,8 @@ export default function AnimatedBackground() {
                 tag={randomElement}
                 delay={Math.random() * 15}
                 duration={Math.random() * 2 + 1.5}
-                size={Math.random() * 70}
-                left={Math.random() * 70}
+                size={Math.random() * 5}
+                left={Math.random() * 20}
                 color={randomColor}
             />
             )
