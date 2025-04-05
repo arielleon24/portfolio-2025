@@ -3,16 +3,16 @@ import {motion} from 'framer-motion';
 import type React from 'react';
 import { useEffect, useState } from 'react';
 
-type SemanticElementTag = | 'article' |'main' | 'footer' | 'header' | 'nav' | 'section' | 'mark';
+type TeachStackTag = 'Typescript'|'React.js'| 'Next.js'| 'Cypress'| 'Jest'| 'Javascript'| 'Node.js'| 'Rest APIs'| 'Responsive Design'| 'Git - Version Control'| 'Custom Hooks' | "Python";
 
-//semantic HTML elements to be used in the animation
-const semanticElements = [
-    'article','main', 'footer', 'header', 'nav', 'section', 'mark'
+//tech stack to be used in the animation
+const techStack = [
+    'Typescript','React.js', 'Next.js', 'Cypress', 'Jest', 'Javascript', 'Node.js', 'Rest APIs', 'Responsive Design', 'Git - Version Control', 'Custom Hooks', "Python"
 ];
 
-// Define the props interface for the SemanticShootingStar component
-interface SemanticShootingStarProps {
-    tag: SemanticElementTag;
+// Define the props interface for the TechStackShootingStar component
+interface TechStackShootingStarProps {
+    tech: TeachStackTag;
     delay?: number;
     duration?: number;
     size?: number;
@@ -22,11 +22,10 @@ interface SemanticShootingStarProps {
   }
 
 //renders the "shooting stars"
-const SemanticShootingStar = ({tag, delay = 0, duration = 1, size = 1, top = 0, left = 0, color = "white"} : SemanticShootingStarProps) => {
-    const Element = motion[tag]
+const TechStackShootingStar = ({tech, delay = 0, duration = 1, size = 1, top = 0, left = 0, color = "white"} : TechStackShootingStarProps) => {
 
     return (
-        <Element
+        <motion.span
             aria-hidden="true"
             className="absolute rounded-full text-xs font-mono opacity-70"
             style={{
@@ -52,8 +51,8 @@ const SemanticShootingStar = ({tag, delay = 0, duration = 1, size = 1, top = 0, 
                 repeatDelay: Math.random() * 15 + 5
             }}
         >
-            {`<${tag}>`}
-        </Element>
+            {`${tech}`}
+        </motion.span>
     )
 }
 
@@ -88,7 +87,6 @@ export default function AnimatedBackground() {
         ))
         setStars(starsArray)
 
-        // Generate semantic element shooting stars
         const colors = [
         "#10b981", // emerald-500
         "#06b6d4", // cyan-500
@@ -99,16 +97,16 @@ export default function AnimatedBackground() {
       ]
 
       const shootingStarsArray = Array.from({length: 20}).map((_, i)=>{
-        //Random element from semanticElements
-        const randomElement = semanticElements[i % semanticElements.length] as SemanticElementTag
+        //Random element from techStack
+        const randomElement = techStack[i % techStack.length] as TeachStackTag
         const randomColor = colors[Math.floor(Math.random() * colors.length)]
 
         return (
-            <SemanticShootingStar
+            <TechStackShootingStar
                 key={`shooting-star-${i}`}
-                tag={randomElement}
+                tech={randomElement}
                 delay={Math.random() * 15}
-                duration={Math.random() * 2 + 1.5}
+                duration={Math.random() * 2 + 2}
                 size={Math.random() * 5}
                 left={Math.random() * 20}
                 color={randomColor}
@@ -127,7 +125,7 @@ export default function AnimatedBackground() {
             {stars}
           </figure>
     
-          {/* Semantic element shooting stars */}
+          {/* Tech Stack shooting stars */}
           <div className="absolute inset-0 overflow-hidden">{shootingStars}</div>
     
           {/* Gradient blobs */}
