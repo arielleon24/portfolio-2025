@@ -1,9 +1,13 @@
 import AnimatedBackground from "@/components/animated-background";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="relative min-h-screen overflow-hidden">
         <AnimatedBackground/>
+        <div className="relative-z-10">
+          <Navbar/>
+        </div>
       </main>
   );
 }
