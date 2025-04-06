@@ -3,11 +3,11 @@ import {motion} from 'framer-motion';
 import type React from 'react';
 import { useEffect, useState } from 'react';
 
-type TeachStackTag = 'Typescript'|'React.js'| 'Next.js'| 'Cypress'| 'Jest'| 'Javascript'| 'Node.js'| 'Rest APIs'| 'Responsive Design'| 'Git - Version Control'| 'Custom Hooks' | "Python";
+type TeachStackTag = 'Typescript'|'React.js'| 'Next.js'| 'Cypress'| 'Jest'| 'Javascript'| 'Node.js'| 'Rest APIs'| 'Responsive Design'| 'Git - Version Control'| 'Custom Hooks' | "Python" | 'SQL';
 
-//tech stack to be used in the animation
+//tech stack and skills to be used in the animation
 const techStack = [
-    'Typescript','React.js', 'Next.js', 'Cypress', 'Jest', 'Javascript', 'Node.js', 'Rest APIs', 'Responsive Design', 'Git - Version Control', 'Custom Hooks', "Python"
+    'Typescript','React.js', 'Next.js', 'Cypress', 'Jest', 'Javascript', 'Node.js', 'Rest APIs', 'Responsive Design', 'Git - Version Control', 'Custom Hooks', "Python", "SQL"
 ];
 
 // Define the props interface for the TechStackShootingStar component
@@ -51,7 +51,7 @@ const TechStackShootingStar = ({tech, delay = 0, duration = 1, size = 1, top = 0
                 repeatDelay: Math.random() * 15 + 5
             }}
         >
-            {`${tech}`}
+            {`{${tech}}`}
         </motion.span>
     )
 }

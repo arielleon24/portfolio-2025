@@ -1,5 +1,4 @@
 import AnimatedBackground from "@/components/animated-background";
-import Image from "next/image";
 
 export default function Home() {
   return (
