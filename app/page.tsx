@@ -1,4 +1,5 @@
 import AnimatedBackground from "@/components/animated-background";
+import Intro from "@/components/intro";
 import Navbar from "@/components/navbar";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
         <AnimatedBackground/>
         <div className="relative-z-10">
           <Navbar/>
+          <Intro/>
         </div>
       </main>
   );
