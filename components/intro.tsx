@@ -4,16 +4,8 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { useEffect } from "react";
 
 export default function Intro() {
-
-    useEffect(() => {
-        console.log("Intro component mounted");
-        return () => {
-            console.log("Intro component unmounted"); // This will help identify if it's being unmounted
-        }
-    }, []);
 
     const scrollToAbout = () => {
         document.getElementById("about")?.scrollIntoView({behavior: 'smooth'})
@@ -50,7 +42,7 @@ export default function Intro() {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="mx-auto mb-8 max-w-lg text-xl text-slate-300"
                 >
-                    A passionate full-stack developer with 3 years of experience
+                    A passionate full-stack developer living in Montreal!
                 </motion.p>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.8 }}>
                     <Button
