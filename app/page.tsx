@@ -2,6 +2,7 @@ import About from "@/components/about";
 import AnimatedBackground from "@/components/animated-background";
 import Intro from "@/components/intro";
 import Navbar from "@/components/navbar";
+import Resume from "@/components/resume";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <Navbar/>
           <Intro/>
           <About/>
+          <Resume/>
         </div>
       </main>
   );
