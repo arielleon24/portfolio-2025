@@ -36,7 +36,7 @@ export default function About() {
       }
   ]
 
-  const aboutMe = `Hi, I'm a Full Stack Developer with 3+ years of experience building responsive, scalable web applications using React, TypeScript, JavaScript, Node.js, and SQL. I thrive in Agile teams, enjoy solving complex problems, and value clean, maintainable code.
+  const aboutMe = `I'm a Full Stack Developer with 3+ years of experience building responsive, scalable web applications using React, TypeScript, JavaScript, Node.js, and SQL. I thrive in Agile teams, enjoy solving complex problems, and value clean, maintainable code.
                     I’ve worked on everything from frontend architecture and custom hooks to backend integrations and automated testing. With a strong analytical mindset and clear communication, I bring both technical skill and a collaborative spirit to every project.
                     Fluent in English, French, and Spanish, I enjoy learning new technologies and look forward to creating something amazing with you!`
 
@@ -78,7 +78,7 @@ export default function About() {
             ))}
           </motion.div>
 
-          {/* Skills cards - arranged in a grid */}
+          {/* Skills cards grid */}
           {skills.map((skill, index) => (
             <motion.div
               key={index}

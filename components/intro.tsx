@@ -14,21 +14,7 @@ export default function Intro() {
     return (
         <section className="flex min-h-screen flex-col items-center justify-center px-4 text-center relative z-20 pt-16 md:pt-20">
             <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} transition={{duration: 0.8}}>
-                {/* My picture */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8}}
-                    animate={{opacity: 1, scale: 1}}
-                    transition={{delay: 0.2, duration: 0.5}}
-                    className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border-4 border-emerald-500/30 md:h-48 md:w-48"
-                >
-                    {/* <Image
-                        src={''}
-                        alt='My picture'
-                        width={200}
-                        height={200}
-                        className="h-full w-full object-cover"
-                    /> */}
-                </motion.div>
+
 
                 <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
                     <span className="block">Hi, Im</span>
