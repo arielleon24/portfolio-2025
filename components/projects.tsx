@@ -29,13 +29,13 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
       whileHover={{ y: -10, transition: { duration: 0.3 } }}
       className="group relative overflow-hidden rounded-xl bg-slate-800/50 backdrop-blur transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20 flex flex-col h-full"
     >
-      <motion.div className="relative h-40 overflow-hidden" whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }}>
+      <motion.div className="relative h-45 overflow-hidden" whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }}>
         <Image
           src={project.image || "/placeholder.svg?height=600&width=800"}
           alt={project.title}
           width={800}
           height={600}
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          className="object-cover transition-transform duration-300 group-hover:scale-110"
           style={{ width: "100%", height: "100%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60" />
@@ -55,7 +55,7 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
         </motion.h3>
 
         {/* Fixed height description container with overflow */}
-        <div className="h-36 mb-4 overflow-y-auto">
+        <div className="h-36 mb-2 overflow-y-auto">
           <p className="text-slate-300">{project.description}</p>
         </div>
 
@@ -80,7 +80,7 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
 
         {/* Buttons section - pushed to bottom */}
         <div className="flex gap-3 mt-auto">
-          {project.liveUrl && project.liveUrl !== "#" && (
+          {/* {project.liveUrl && project.liveUrl !== "#" && (
             <Button
               size="sm"
               variant="outline"
@@ -92,11 +92,11 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
                 Live Demo
               </a>
             </Button>
-          )}
+          )} */}
           <Button
             size="sm"
             variant="outline"
-            className="flex items-center gap-1 border-emerald-500 bg-emerald-500/20 text-white hover:scale-110"
+            className="flex items-center gap-1 border-emerald-500 bg-emerald-500/20 text-white hover:scale-110 transition-transform duration-300"
             asChild
           >
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

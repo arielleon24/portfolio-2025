@@ -94,7 +94,7 @@ export default function Resume() {
                 {/* uncomment when resume is ready @toDo */}
                 <div className="mb-15 flex justify-center">
                     <a href="https://drive.google.com/file/d/1UF93LaGHtw7m2pfc9IRu51bAqkcQy2EX/view?usp=sharing">
-                        <Button className="group flex cursor-pointer items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white opacity-90 hover:scale-110">
+                        <Button className="group flex cursor-pointer transition-transform duration-300 items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white opacity-90 hover:scale-110">
                             <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
                             Download Resume
                         </Button>

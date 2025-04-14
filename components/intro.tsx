@@ -35,7 +35,7 @@ export default function Intro() {
         >
           <a
             href="mailto:arielleon.dev24@gmail.com"
-            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-all duration-500 hover:scale-110"
           >
             <Mail className="h-5 w-5" />
             <span>arielleon.dev24@gmail.com</span>
