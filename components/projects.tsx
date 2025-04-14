@@ -29,7 +29,7 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
       whileHover={{ y: -10, transition: { duration: 0.3 } }}
       className="group relative overflow-hidden rounded-xl bg-slate-800/50 backdrop-blur transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20 flex flex-col h-full"
     >
-      <motion.div className="relative h-48 overflow-hidden" whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }}>
+      <motion.div className="relative h-40 overflow-hidden" whileHover={{ scale: 1.05 }} transition={{ duration: 0.5 }}>
         <Image
           src={project.image || "/placeholder.svg?height=600&width=800"}
           alt={project.title}
@@ -55,7 +55,7 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
         </motion.h3>
 
         {/* Fixed height description container with overflow */}
-        <div className="h-32 mb-4 overflow-y-auto">
+        <div className="h-34 mb-4 overflow-y-auto">
           <p className="text-slate-300">{project.description}</p>
         </div>
 

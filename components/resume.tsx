@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { Briefcase, GraduationCap } from 'lucide-react'
+import { Briefcase, GraduationCap, Download, Link } from 'lucide-react'
+import { Button } from "./ui/button";
 
 export default function Resume() {
     const sectionRef = useRef(null);
@@ -87,16 +88,18 @@ export default function Resume() {
     return (
         <section id="resume" className="py-20 md:py-20" ref={sectionRef}>
             <div className="container mx-auto px-4">
-                <h2 className="mb-20 text-center text-3xl font-bold text-white md:text-4xl opacity-90">
+                <h2 className="mb-5 text-center text-3xl font-bold text-white md:text-4xl opacity-90">
                     Resume
                 </h2>
                 {/* uncomment when resume is ready @toDo */}
-                {/* <div className="mb-10 flex justify-center">
-                    <Button className="group flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white opacity-90">
-                        <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
-                        Download Resume
-                    </Button>
-                </div> */}
+                <div className="mb-15 flex justify-center">
+                    <a>
+                        <Button className="group flex cursor-pointer items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white opacity-90 hover:scale-110">
+                            <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
+                            Download Resume
+                        </Button>
+                    </a>
+                </div>
                 
                 <div className="mx-auto max-w-6xl">
                     <div 
@@ -143,7 +146,7 @@ export default function Resume() {
                                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400">
                                     <GraduationCap className="h-5 w-5" />
                                 </div>
-                                <h3 className="text-2xl font-semibold text-white">Education</h3>
+                                <h3 className="text-2xl font-semibold text-white">Training</h3>
                             </div>
             
                             {education.map((edu, index) => (
