@@ -62,7 +62,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="container mx-auto px-4 py-16">
+    <section id="about" className="container mx-auto px-4 py-20">
       <motion.div ref={ref} initial="hidden" animate={isInView ? "visible" : "hidden"} variants={containerVariants}>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">

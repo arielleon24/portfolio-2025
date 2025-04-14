@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
-import Image from "next/image";
 
 export default function Intro() {
 
@@ -19,7 +18,7 @@ export default function Intro() {
                 <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
                     <span className="block">Hi, Im</span>
                     <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                        Ariel
+                        Ariel Leon
                     </span>
                 </h1>
                 <motion.p
@@ -28,7 +27,7 @@ export default function Intro() {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="mx-auto mb-8 max-w-lg text-xl text-slate-300"
                 >
-                    A passionate full-stack developer living in Montreal!
+                    A passionate Montreal based Full-Stack Developer looking for new opportunities.
                 </motion.p>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.8 }}>
                     <Button

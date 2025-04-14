@@ -1,8 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { Download, Briefcase, GraduationCap } from 'lucide-react'
-import { Button } from "./ui/button";
+import { Briefcase, GraduationCap } from 'lucide-react'
 
 export default function Resume() {
     const sectionRef = useRef(null);
@@ -33,10 +32,46 @@ export default function Resume() {
 
     const experiences = [
         {
-            title: "Señor Prog",
-            company: 'Prog inc',
-            period: "2022 - now",
-            description: 'Will write when I look at resume'
+            title: "Software Developper",
+            company: 'Acro Commerce',
+            period: "September 2022 - May 2024",
+            description: [
+                'Develop, implement, and maintain scalable components using TypeScript and React for our E-commerce accelerator.',
+                'Design custom hooks to efficiently query various types of data from our APIs.',
+                'Implement and maintain test automation with Cypress to ensure the codebase remains clean and functional.',
+                'Provide code reviews and constructive feedback to my colleagues, fostering collaboration and continuous improvement within the team.'
+            ]
+        },
+        {
+            title: "Integration Specialist",
+            company: 'Braindate by E-180',
+            period: "September 2021 - July 2022",
+            description: [
+                'Work with Python and Django to integrate Braindate seamlessly into client event platforms for both desktop and mobile users.',
+                'Join client calls to explain our integration process and ensure understanding of the task at hand.',
+                'Analyze API documentation from tech partners to optimize and further develop mutual integrations.',
+                'Meet tight deadlines by testing client platforms and ensuring optimal functionality in time for launch.'
+            ]
+        },
+        {
+            title: "Full Stack Developer",
+            company: 'Pao Power',
+            period: "August 2021 - October 2021",
+            description: [
+                'Build and design responsive mobile pages for the app using React.js and TypeScript.',
+                'Integrate a translation library into the app to enable multiple translations through sub-path routings and user settings',
+                'Optimize application performance by implementing server-side rendering and static site generation features in Next.js.'
+            ]
+        },
+        {
+            title: "Web Development Mentor",
+            company: 'Lighthouse Labs',
+            period: "March 2021 - June 2021",
+            description: [
+                'Provide technical support to students by troubleshooting and debugging their code, helping them understand and resolve errors effectively.',
+                'Reinforce key web development concepts covered in the bootcamp’s curriculum, ensuring students gained a strong grasp of front-end and back-end technologies.',
+                'Guide students through hands-on coding challenges, helping them build confidence in their problem-solving abilities and project development.',
+            ]
         }
     ]
 
@@ -50,18 +85,18 @@ export default function Resume() {
     ]
 
     return (
-        <section id="resume" className="py-20 md:py-32" ref={sectionRef}>
+        <section id="resume" className="py-20 md:py-20" ref={sectionRef}>
             <div className="container mx-auto px-4">
-                <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl opacity-90">
+                <h2 className="mb-20 text-center text-3xl font-bold text-white md:text-4xl opacity-90">
                     Resume
                 </h2>
-                
-                <div className="mb-10 flex justify-center">
+                {/* uncomment when resume is ready @toDo */}
+                {/* <div className="mb-10 flex justify-center">
                     <Button className="group flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white opacity-90">
                         <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
                         Download Resume
                     </Button>
-                </div>
+                </div> */}
                 
                 <div className="mx-auto max-w-4xl">
                     <div 
@@ -96,7 +131,9 @@ export default function Resume() {
                                         <span className="text-slate-500">|</span>
                                         <span className="text-sm text-slate-400">{exp.period}</span>
                                     </div>
-                                    <p className="text-slate-300">{exp.description}</p>
+                                    <ul>
+                                        {exp.description.map((exp, index) => (<li key={index} className="text-slate-300">-{exp}</li>))}
+                                    </ul>
                                 </div>
                             ))}
                         </div>

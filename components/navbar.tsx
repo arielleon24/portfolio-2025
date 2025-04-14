@@ -20,12 +20,11 @@ export default function Navbar() {
 
     //Links
     const navLinks = [
-        {name: 'Home', href: '#'}, 
+
         {name: 'About', href: '#about'},
+        {name: "Resume", href: '#resume'},
         {name: 'Skills', href: '#skills'},
         {name: 'Projects', href: '#projects'},
-        {name: "Resume", href: '#resume'},
-        {name: 'Contact', href: '#contact'}
     ]
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
