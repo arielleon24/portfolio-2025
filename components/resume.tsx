@@ -98,7 +98,7 @@ export default function Resume() {
                     </Button>
                 </div> */}
                 
-                <div className="mx-auto max-w-4xl">
+                <div className="mx-auto max-w-6xl">
                     <div 
                         className="grid gap-12 md:grid-cols-2 transition-all duration-1000 ease-out"
                         style={{ 
