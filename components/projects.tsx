@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Github, ExternalLink } from "lucide-react"
+import { Github } from "lucide-react"
 import { Button } from "./ui/button"
 import { Badge } from "./ui/badge"
 import Image from "next/image"
