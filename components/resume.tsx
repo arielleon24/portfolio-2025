@@ -128,7 +128,7 @@ export default function Resume() {
                                     <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
                                     <div className="mb-2 flex items-center gap-2 text-emerald-400">
                                         <span>{exp.company}</span>
-                                        <span className="text-slate-500">|</span>
+                                        <span className="text-slate-400">|</span>
                                         <span className="text-sm text-slate-400">{exp.period}</span>
                                     </div>
                                     <ul>
@@ -160,7 +160,7 @@ export default function Resume() {
                                     <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
                                     <div className="mb-2 flex items-center gap-2 text-cyan-400">
                                         <span>{edu.institution}</span>
-                                        <span className="text-slate-500">|</span>
+                                        <span className="text-slate-400">|</span>
                                         <span className="text-sm text-slate-400">{edu.period}</span>
                                     </div>
                                     <p className="text-slate-300">{edu.description}</p>
