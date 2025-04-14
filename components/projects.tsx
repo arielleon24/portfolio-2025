@@ -136,7 +136,7 @@ export default function Projects() {
     },
     {
       title: "ReduxMovies",
-      description: "Work in progress leveraging OMDB's Api to query all Star Wars media",
+      description: "A work in progress multi-page React app that uses OMDB's RESTful API to query and filter movie information, images and descriptions.",
       image: "/gifs/redMov.gif?height=600&width=800",
       tags: ["React.js", "Redux", "OMDB's Api", 'Axios'],
       liveUrl: "#",
