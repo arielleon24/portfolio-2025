@@ -55,7 +55,7 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
         </motion.h3>
 
         {/* Fixed height description container with overflow */}
-        <div className="h-34 mb-4 overflow-y-auto">
+        <div className="h-36 mb-4 overflow-y-auto">
           <p className="text-slate-300">{project.description}</p>
         </div>
 
